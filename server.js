@@ -26,15 +26,22 @@ var productsController = require('./controllers/productsController');
 
 var router = express.Router();
 
-router.param('id', productsController.findById);
-router.get('/products', productsController.index); 
-router.get('/products/new', productsController.new);
-router.post('/products', productsController.create);
-router.get('/products/:id/edit', productsController.edit);
-router.put('/products/:id', productsController.update);
-router.get('/products/:id', productsController.show);
-router.delete('/products/:id', productsController.destroy);
+router.route('/products/new')
+  .get(productsController.new);
 
+router.route('/products')
+  .get(productsController.index)
+  .post(productsController.create);
+
+router.route('/products/:id')
+  .get(productsController.show)
+  .put(productsController.update)
+  .delete(productsController.destroy);
+
+router.route('/products/:id/edit')
+  .get(productsController.edit);
+
+router.param(':id', productsController.findById);
 
 app.use('/', router);
 
