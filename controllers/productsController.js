@@ -1,3 +1,7 @@
+var db = require('../db');
+var _ = require('lodash');
+var Product = db.Product;
+
 module.exports = {
   index: function (req, res) {
 	  Product.find({}, function (err, products) {
@@ -5,7 +9,7 @@ module.exports = {
 
 	    res.render('products/index', { products: products });
 	  });
-	},
+  },
   show: function (req, res) {
     var product = req.product;	
  
