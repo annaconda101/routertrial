@@ -1,0 +1,23 @@
+<h1>Shopping List Entry</h1>
+
+  <form action="/products", method="POST">
+    <div>
+      <label>
+        <input type="text" name="product[item]" value="{{ Product.item }}">
+      </label>
+        <p>Item {{ errors.item.message }}</p>
+    </div>
+    <div>
+      <label>
+        <input type="text" name="product[quantity]" value="{{ Product.quantity }}">
+      </label>
+        <p>Quantity {{ errors.quantity.message }}</p>
+    </div>
+    <div>
+      <label>
+        <input type="text" name="product[brand]" value="{{ Product.brand }}">
+      </label>
+        <p>Brand {{ errors.brand.message }}</p>
+    </div>
+    <input type="submit" value="Create">
+  </form>

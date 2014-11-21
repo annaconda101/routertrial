@@ -1,0 +1,23 @@
+<h1>Shopping List</h1>
+
+{{#each products}}
+  <p>
+    Item: {{item}}<br>
+    Quantity: {{quantity}}<br>
+    Brand: {{brand}}<br>
+    id:{{id}}
+   </p>
+   <form action="/products/{{id}}" method="POST">
+     <div>
+       <label>
+         <input type="hidden" name="_method" value="DELETE">
+         <input type="submit" value="Destroy">
+       </label>
+     </div>
+   </form>
+   <a href="/products/{{id}}/edit">Edit</a>    
+{{/each}}
+
+<a href="/products/new">New Product</a>
+
+

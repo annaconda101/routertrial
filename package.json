@@ -1,0 +1,24 @@
+{
+  "name": "routertrial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.2",
+    "hbs": "^2.7.0",
+    "lodash": "^2.4.1",
+    "method-override": "^2.3.0",
+    "mongoose": "^3.8.19",
+    "node": "^0.0.0",
+    "router": "^1.0.0-beta.1",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

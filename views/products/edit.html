@@ -1,0 +1,29 @@
+<h1>Edit Product</h1>
+
+
+   <form action="/products/{{product.id}}" method="POST">
+     <div>
+       <input type="hidden" name="_method" value="PUT">
+     </div>
+     <div>
+       <label>
+         <input type="text" name="product[item]" value="{{ product.item }}">  
+       </label>
+         <p>Item {{ errors.item.message }}</p>
+      </div>
+
+      <div>
+       <label>
+         <input type="text" name="product[quantity]" value="{{ product.quantity }}">  
+       </label>
+         <p>Quantity {{ errors.quantity.message }}</p>
+      </div>
+
+      <div>
+       <label>
+         <input type="text" name="product[brand]" value="{{ product.brand }}">  
+       </label>
+         <p>Brand {{ errors.brand.message }}</p>
+      </div>
+      <input type="submit" value="Update">
+    </form>
